@@ -1,12 +1,17 @@
 # spring-boot-jms
 Setting up JMS with Spring Boot
 
-## how to send JSON message via CURL
+## How to send JSON message via CURL
 ```shell
 curl -X POST --header "Content-Type: application/json" -d '{"from":"you", "to":"me", "amount":200}' localhost:8090/transaction/send
 ```
 
-## How to start MongoDB in Docker container
+## How to start MongoDB in Docker container - NOT official
+```shell
+docker run -d -p 27017:27017 -p 28017:28017 --name some-mongo mongo:3.0 --auth
+```
+
+## How to start MongoDB in Docker container - NOT official
 ```shell
 docker run -d -p 27017:27017 -p 28017:28017 -e MONGODB_PASS="mypass" tutum/mongodb
 ```
